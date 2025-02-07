@@ -29,8 +29,6 @@ vpc_security_group_ids = [module.blog_sg.security_group_id]
   }
 }
 
-
-
 module "blog_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.3.0"
@@ -54,7 +52,7 @@ vpc_id = data.aws_vpc.default.id
 ingress_rule        = ["http-80-tcp","https-443-tcp"]
 ingress_cidr_blocks = ["0.0.0.0/0"]
 
-egress_rule        = ["all"]
+egress_rule        = ["all-all"]
 egress_cidr_blocks = ["0.0.0.0/0"]
 }
 
