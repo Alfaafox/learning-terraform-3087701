@@ -27,7 +27,7 @@ resource "aws_instance" "blog" {
   }
 }
 
-resource "aws_security_group" {
+resource "aws_security_group" "blog" {
 name = "blog"
 description = "Allow http and https in . Allow everyting out "
 
